@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Hotel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--Head-->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title">Underwater Monopoly Sign up</h4>
+        
+      </div>
+
+      <!-- body -->
+      <div class="modal-body">
+        Please sign in or create an account below to be selected for the underwater monopoly!!
+      </div> 
+    </div>
+  </div>
+</div>
+
+<!--image-->
+<div id="app-container">
+	
+	<div class="app-box double-row"></div>
+	
+	<div id="icon-box" class="app-box double-row">
+		<img src="data:image/jpeg;base64,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" alt="monopoly">
+	</div> 
+	
+	<div id="title-box" class="app-box single-row">
+		<h1>The wettest monopoly around</h1>
+	</div> 
+	
+	<div class="app-box double-row">
+
+
+    
+			<!--mid of page-->
+		<div id="app-inputs-bottom" class="double-row"> <div> 
+    <label>Username</label> 
+  <input type="text" placeholder="UserName"><br> 
+</div>
+      <div id="app-inputs-bottom" class="double-row"> <div> 
+    
+			<div> 
+       <label>Password</label>
+  <input type="text" placeholder="Password"><br>
+        
+</div>
+		
+		</div> 
+	</div> 
+	
+	<div class="app-box single-row">
+		<button disabled>Sign In</button> 
+    </div>
+  
+	
+	<div class="app-box double-row">
+    
+		<a href="#">Forgot Username or Password?</a> 
+		
+	</div> 
+	
+	<div class="app-box double-row"></div>
+	<div class="modal-body">
+        Or Create An Account Here!
+      </div>
+<div id="app-inputs-bottom" class="double-row"> <div> 
+    <label>Full Name:</label> 
+  <input type="text" placeholder="Ful Name"><br> 
+</div>
+      <div id="app-inputs-bottom" class="double-row"> <div> 
+    
+			<div> 
+       <label>Phone:</label>
+  <input type="text" placeholder="Phone"><br>
+        
+</div>
+        	<div> 
+       <label>Address:</label>
+  <input type="text" placeholder="Address"><br>
+        
+</div>	
+        <div> 
+       <label>SSN:</label>
+  <input type="text" placeholder="SSN"><br>
+        
+</div>
+		<div> 
+       <label>CCN:</label>
+  <input type="text" placeholder="CNN"><br>
+        
+</div>
+</div>
+                        <a href="https://westyler28.github.io/Hotel/" target="_blank" class="btn btn-primary"> Repo</a>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
